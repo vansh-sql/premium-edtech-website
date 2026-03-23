@@ -1,0 +1,142 @@
+<!-- ============================================== -->
+<!-- 🎓 COURSES.HTML (Course ki Jankari wala page) -->
+<!-- Iss page me sabhi certificate programs likhe hue hain jinki photo automatically net se ayegi -->
+<!-- ============================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses | COMPUTER CARRIER EDUCATION</title>
+    <!-- Fonts aur Icon lana CSS layout ke liye -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main design lagane ke liye (CSS file ka link jode) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Premium Blobs Background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- 🔝 NAVBAR (Menu jisme har page ka shortcut hota hai) -->
+    <!-- Sticky lagane se yeh humesha scroll par upar chipka rahega -->
+    <header class="header sticky" id="header">
+        <nav class="navbar container">
+            <a href="/" class="logo">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="logo-text">
+                    <span class="logo-title text-dark">CCE</span>
+                    <span class="logo-sub">Amethi</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <!-- Home par jaane ke liye wapis index khulega -->
+                <li><a href="/">Home</a></li>
+                <!-- About pe jane ke liye click hoga about.html pr -->
+                <li><a href="about.html">About</a></li>
+                <!-- Courses wale page pe is time active color hoga ("neela highlight") -->
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <!-- Contact wale page par jayege -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 📚 COURSES DETAILS (Pure website ke sikhane wale subjects ka hissa) -->
+    <section class="section bg-light" style="padding-top: 8rem;"> <!-- Thoda upar khaali jaga di taaki navbar se chipke nhi -->
+        <div class="container">
+            <!-- Sirf Heading Dikhane Ke Liye Beech mein -->
+            <div class="section-header text-center">
+                <span class="subtitle">Detailed Syllabus</span>
+                <h2>Explore All Our Courses</h2>
+                <p>Equip yourself with the skills needed to dominate the IT industry.</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- 🎓 Course ADCA -->
+                <div class="course-card glass-card">
+                    <div class="course-img">
+                        <!-- Background Net se image ayegi -->
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ADCA">
+                        <span class="price-tag">₹4,999</span> <!-- Course fees jo card me upar dikhegi -->
+                    </div>
+                    <div class="course-content">
+                        <!-- Course ke baare mein content likhna -->
+                        <h3>ADCA Dashboard (1 Year)</h3>
+                        <p>Advance Diploma in Computer Applications. Complete professional course covering fundamentals, MS Office, Tally, Programming, and Internet usage.</p>
+                        <!-- Agar enroll pe dabana ho sidha contact (Form) page open -->
+                        <a href="contact.html" class="course-link">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 🎓 Course CCC (Updated Computer Image) -->
+                <div class="course-card glass-card">
+                    <div class="course-img">
+                        <!-- Desktop laptop wali saaf photu di gayi hai takiye kapde/clothes na aayen -->
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CCC Computer Class">
+                        <span class="price-tag">₹2,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>NIELIT CCC (3 Months)</h3>
+                        <p>A mandatory government certification scheme covering basic IT tools, e-governance, digital financial services, and web navigation.</p>
+                        <a href="contact.html" class="course-link">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 🎓 Course O Level -->
+                <div class="course-card glass-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="O Level Code">
+                        <span class="price-tag">₹4,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>"O" Level Certification (1 Year)</h3>
+                        <p>Complete web and software development diploma. Includes Python programming, Web Designing, HTML/CSS, SQL, and IoT concepts.</p>
+                        <a href="contact.html" class="course-link">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- 🎓 Course Tally -->
+                <div class="course-card glass-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tally ERP gst">
+                        <span class="price-tag">₹2,999</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Tally Prime & GST (3 Months)</h3>
+                        <p>Become a professional accountant. Learn core accounting, inventory management, taxation features, returns filing and GST compliance.</p>
+                        <a href="contact.html" class="course-link">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 🎓 Course MS Office (Updated Working Image) -->
+                <div class="course-card glass-card">
+                    <div class="course-img">
+                        <!-- Office/Desk Work image aayega taaki kapde na dhikhe -->
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MS Office Works">
+                        <span class="price-tag">₹1,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>MS Office Pro (Basic to Master)</h3>
+                        <p>Office Management tools jaise MS Word, PowerPoint, Excel wagera acche se sikhaaye jaate hain aane wale official kaamo me madad kare.</p>
+                        <a href="contact.html" class="course-link">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⬇️ FOOTER (Website ka neeche wala copyright hissa jisme saal likha hai) -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Computer Carrier Education. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Design me jaanke chalne ke liye script -->
+    <script src="script.js"></script>
+</body>
+</html>

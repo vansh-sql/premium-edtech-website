@@ -1,0 +1,909 @@
+/* ================================================== */
+/* 🎨 STYLE.CSS FILE */
+/* Ye website ka singar (makeup) hai. Isse colours, fonts, aur design theek set hote hain. */
+/* ================================================== */
+
+/* 🅰️ Sabse phle Google Fonts ("Poppins") ko internet se bulana taaki likhawat (text) modern lage */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* 🌈 :root -> Ye ek jagah hai jahan saare main colors aur styles ek baar save kar liye jate hain (Variables) */
+:root {
+    --primary: #4F46E5; /* Indigo */
+    --primary-dark: #312e81; /* Darker Indigo */
+    --secondary: #ec4899; /* Pinkish-purple for a richer gradient combo */
+    --accent: #0ea5e9; /* Cyan */
+    --bg-light: #f8fafc; /* Website ka peeche ka halka background */
+    --bg-white: #FFFFFF; /* Bilkul safed background */
+    --text-dark: #0f172a; /* Kaale shabd */
+    --text-light: #475569; /* Halka grey wording */
+    --glass-bg: rgba(255, 255, 255, 0.65); /* Sheeshe jaisa background */
+    --glass-border: rgba(255, 255, 255, 0.6); /* Sheeshe ki lines */
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* Box shadow */
+    --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Modern bouncy transition */
+}
+
+/* 🔄 Start se sab chiz ko "Reset" karna (Taake koi faltu spacing internet explorer, chrome khud na lele) */
+* {
+    margin: 0;           /* Baahar ka khali hissa 0 */
+    padding: 0;          /* Andar ka khali hissa 0 */
+    box-sizing: border-box; /* Width fix rakhne ke liye */
+    font-family: 'Poppins', sans-serif; /* Likhawat yahan 'Poppins' set ki */
+}
+
+/* ⬇️ Scroll ko aaram se niche aane dena */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 🌐 BODY (Puri screen body kesi hogi) */
+body {
+    background-color: var(--bg-light); /* Background color yahan apply hua */
+    color: var(--text-dark); /* Words and wording color */
+    line-height: 1.7; /* 2 lines ke beech ka khali antar */
+    overflow-x: hidden; /* Sideworks me screen bahr na jae scroll na ho left-right */
+}
+
+/* 🔗 ALINKS (`a` tags ko set karna) */
+a {
+    text-decoration: none; /* Underline (Neeche line) hhatana link se */
+    color: inherit; /* Apne as pas jese the wise color lena */
+}
+
+ul {
+    list-style: none; /* Points (Dots) hatana lists me se */
+}
+
+/* 📦 CONTAINER (Beech me rakhna sab, taaki corner chhut jaye thoda) */
+.container {
+    max-width: 1280px; /* Iske jyada width nahi hogi center block ki */
+    margin: 0 auto; /* isse sab content beech me fixed rakha jayega */
+    padding: 0 2rem; /* Thoda padding andar ki divar se hatakar dba k rkhega */
+}
+
+/* 📏 SECTIONS (Har alag block/jagah me kitna gap dena hai) */
+.section {
+    padding: 6rem 0; /* har section me uper neche lumbi khali jaga, 6rem tak */
+}
+
+.bg-light {
+    background-color: var(--bg-white); /* Khaas hison ke peeche safed rang */
+}
+
+/* 🅰️ TYPOGRAPHY (Headings kese dikhenge, bde or chote) */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 700; /* Headings ko mote banana (Bold) */
+    line-height: 1.2;
+}
+
+.section-header {
+    margin-bottom: 4rem; /* Section ke shuru heading ke bad niche tk gap dene ke liye */
+}
+
+/* 🔹 SUBTITLE (Heading ke uper jo choti nila rang ki heading aayegi) */
+.subtitle {
+    display: inline-block;
+    color: var(--primary); /* Neela diya */
+    font-weight: 600;
+    text-transform: uppercase; /* Sabko CAPS letter mein krdiya AUTOMATIC */
+    letter-spacing: 2px; /* words ke beeach halka space */
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.text-cyan {
+    color: var(--accent) !important;
+}
+
+.text-white {
+    color: var(--bg-white) !important;
+}
+
+.text-center {
+    text-align: center; /* Likhawat beech me layegi */
+}
+
+/* ================================================= */
+/* ⏳ PRELOADER (Load hone ke chakar ka animation ghoomta rehta hai) */
+/* ================================================= */
+#preloader {
+    position: fixed; /* Screen pe jama dena isko */
+    top: 0; left: 0; width: 100%; height: 100%; /* Pura fill karna page */
+    background: var(--bg-white);
+    z-index: 9999; /* Sabse uppar dikhna chahiye navbar wagera se bhi upar */
+    display: flex;
+    justify-content: center; /* Center mei aa jayega ghoomne lagta */
+    align-items: center; 
+    transition: opacity 0.5s ease;
+}
+
+/* Preloader dots (Animaion dots ke styling) */
+.loader {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.loader span {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: var(--primary);
+    border-radius: 50%; /* Gol-Gol (circle) banaya dots ko */
+    animation: bounce 1s infinite alternate; /* jump karega */
+}
+/* Alag-alag points pe animations ko thoda deri (delay) deni taki waves aayein */
+.loader span:nth-child(1) { top: 0; left: 0; animation-delay: 0s; }
+.loader span:nth-child(2) { top: 0; right: 0; background: var(--secondary); animation-delay: 0.2s; }
+.loader span:nth-child(3) { bottom: 0; left: 0; background: var(--accent); animation-delay: 0.4s; }
+.loader span:nth-child(4) { bottom: 0; right: 0; background: var(--primary-dark); animation-delay: 0.6s; }
+
+/* Jump karwne ka keyframes CSS. bounce upar neche krtay */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    100% { transform: scale(0.3); opacity: 0.5; }
+}
+
+/* ================================================= */
+/* 🖱️ BUTTONS (Click karne waale sabhi buttno ka design yehan hai) */
+/* ================================================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem; /* andur choda aur lumba banayega */
+    border-radius: 50px; /* Koone (Corners) ko gol karega dawayi ki trh */
+    font-weight: 600;
+    cursor: pointer; /* mouse lgane pr Haath ka icon dikhaega */
+    transition: var(--transition); /* aaram se hilega click pe */
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+/* Main bada button jisko nila-baingani gradient color dia gaya hai */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)); /* dono mixed rang */
+    color: white; /* likhawat White rakhi */
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); /* Halke parchai bottom me glow hogi */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    transition: var(--transition);
+    z-index: -1;
+}
+
+/* Cursor laane pr hover (Button phod sa upar uthega aur shadow badhegi) */
+.btn-primary:hover {
+    transform: translateY(-4px); /* 4 px uper khiskega */
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5); /* Pinkish glow for premium feel */
+}
+
+.btn-primary:hover::before {
+    left: 0;
+}
+
+.btn-outline {
+    background: transparent; /* Bahr pishle wala bg ni h isme */
+    border-color: var(--primary); /* Sirf line nili de di */
+    color: var(--primary); /* Likhawat nila de di */
+}
+
+.btn-outline:hover {
+    background: var(--primary); /* jab is par hover aayega toh yeh pura bg neela ban jaega */
+    color: white;
+}
+
+/* Similar for white outline buttons on dark areas */
+.btn-outline-light {
+    background: transparent;
+    border-color: white;
+    color: white;
+}
+.btn-outline-light:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-outline-sm {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-outline-sm:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.w-100 {
+    width: 100%; /* poori jagah cover karega input */
+}
+
+/* ================================================= */
+/* 🪟 GLASSMORPHISM (Sheesha/Kanch jesa effect) - Modern UI Cards ke liye */
+/* ================================================= */
+.glass-card {
+    background: var(--glass-bg); /* halka semi-transparent */
+    backdrop-filter: blur(20px); /* Pura sheesha dhundhla */
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 20px;  /* Corners round hai gol-gol */
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Shimmer effect for premium card look */
+.glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -150%; width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 5s infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% { left: -150%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+.glass-light {
+    background: rgba(255, 255, 255, 0.1); /* Andhere me roshni se sheesha pattern dikhana */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+/* ================================================= */
+/* 🔝 HEADER & NAVBAR (Website ka sabse upar ka menu, list wala hisa) */
+/* ================================================= */
+.header {
+    position: fixed; /* Top me humesha tikh k rhega yeh patti khisak kar hategi nahi scroll pe */
+    top: 0; left: 0; width: 100%;
+    z-index: 1000; /* Baki sab images/sections iske background/necha aayengi scroll honi per */
+    transition: var(--transition); /* animation time */
+    padding: 1.5rem 0; /* chodi divaar header krlye */
+}
+
+/* Navbar jab scroll hojay tab thoda choda-pan ghata k isme white glassmorphism jodh denge "Sticky" pe */
+.header.sticky {
+    background: var(--glass-bg); /* jab niche gaye ye white ho jana chaiye */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* thodi see parchae chipka degi niche */
+}
+
+.navbar {
+    display: flex; /* Sabse Left mein logo aur Right mein menu rakhna isski madat see asan lgta hai */
+    justify-content: space-between;
+    align-items: center; /* baraber height rakhna dono hi k * */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Icon (Laptop code wala) aur Name me jagahh */
+    z-index: 1001; /* Menu mobile aane par logo oopar reh jaye uske bhi */
+}
+
+/* Logo ka icon nila-baingani chmke ga (Gradient Text css magic) */
+.logo i {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text; /* Color sirf iske text par reh rha bas (Background nhi le rha baki ka) */
+    -webkit-text-fill-color: transparent; /* Font aslu me transparency di gai takii gradient pehchan liya jaye */
+}
+
+/* Header sticky par text kala krna wapis vrna dikhanege ni dhoop/light background pe */
+.header.sticky .logo-title {
+    color: var(--text-dark);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Uper Institute ka name uper neche line m laana ho toh column theek rhaiga */
+}
+
+.logo-title {
+    font-weight: 800; /* Mota akshar/font * */
+    font-size: 1.2rem;
+    line-height: 1;
+    color: white; /* bina scroll kare heading safed rang me rhegi kyuni pchhe dark photos hero k dikhrea hongi*/
+    transition: var(--transition); 
+}
+.header.sticky .logo-title {
+    color: var(--text-dark); /* jab upar bar sticky hue thi, issey Black kiya gya wapis */
+}
+
+.logo-sub {
+    font-size: 0.8rem;
+    color: var(--accent); /* Amethi likha ho vo Asmaani colour dhikhne k */
+    font-weight: 600;
+}
+
+/* Nav Menu ke List Item ki chaukhat (Links line me laana space banakar gap ) */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    font-weight: 500;
+    color: white; /* Bina scroll safed dikhne walie */
+    transition: var(--transition);
+    position: relative; /* niche line animate karwanea ka magic yhi se lg rha, pseudo after is par ayega abhi*/
+}
+
+/* Sticky hone per text light the black karna links ko bhe */
+.header.sticky .nav-links li a {
+    color: var(--text-dark);
+}
+
+/* hover hone pe ek underline (Nichi ki patli si asmaani line banana aakshro per ) aur line chal ke aaye aise animet krne ko pseudo after dalunga  */
+.nav-links li a::after {
+    content: ''; /* Khali rkha isee just visual lne k liye */
+    position: absolute; /* chipkna hai word k niche  */
+    bottom: -5px; left: 0; width: 0; height: 2px; /* motai aur niche lagau dya width 0 yani dhide nhi b shuru m */
+    background: var(--accent);
+    transition: var(--transition); 
+}
+
+/* jab us word k upper aaen/hover karenge width ko dhire dheiree 100 kardnega, ye ek animated effect ha   */
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--accent) !important; /* asmaani cyan rang chadhado current par */
+}
+
+/* 📱 Hamburger (Mobile View Icon 3 Lines waala menu button chupana hai desktop par islye 'none') */
+.hamburger {
+    display: none; /* Computer par nai dekha mobile m media query k zariye dikhayengey vese isko none diya ahbi m */
+    font-size: 1.8rem;
+    color: white; /* safed rung ka */
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+.header.sticky .hamburger {
+    color: var(--text-dark); /* sticky navbar ane k bdd kala karna vohi simple niyam p follow kara h isey */
+}
+
+/* ================================================= */
+/* 🏞️ HERO SECTION (Sabse phle khulne wala bada hissa website ka jahan se career IT line shuru hoti hai likha h ) */
+/* ================================================= */
+.hero {
+    position: relative; 
+    height: 100vh; /* Puri device screen ko upro-niche gherega (Full height layega view port ke kbrabar ) */
+    min-height: 600px; /* kamse kam eitni to hogi ki chota lge choti screen wlo pe */
+    display: flex;
+    align-items: center; /* lkhawat bichme rehane rkhne liye */
+    overflow: hidden; /* Bahar behni wali chezein/photo bahir jayengey screen k the isley hide kari  */
+}
+
+/* Pictures Carousel (Slider ki position relative is hero main hi pack rhnne ka inteazam hai yeh) */
+.carousel {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1; /* likhavey aur isee photo k pche rakhne ke k lie   */
+}
+
+/* Ek specific tasveer ka design ye fade honmey samay legi taaki slide suhane dikhee  */
+.slide {
+    position: absolute; /* islie ek dushre peh pic overla krhe hain */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover; /* Har photos pe image poori dikhi ho jawe isisilye (khinch khach ke theek laa denge cover wgera) */
+    background-position: center; /* beech wali important baat hamesha center rhegi   */
+    opacity: 0; /* chupee rahegai (not visible originally */
+    transition: opacity 1.5s ease-in-out, transform 5s linear; /* Dhira dheere fade hona  */
+    transform: scale(1);
+}
+
+/* jab picture aaye tab zoom hogi halke halke thoda thoda  */
+.slide.active {
+    opacity: 1; /* Pori tarah visible aur dikhao */
+    transform: scale(1.05); /* Slow zoom effect 5% badheka ghoomega */
+}
+
+/*  Tasveer par andhera dherena vrna saaf likhwaat kase dekhti (Dark overlay is for text readablity ) */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.5) 100%);
+    z-index: 2; /* photu ke theek aupar or lekhi hui ke in between rheig */
+}
+
+.hero-content {
+    position: relative; /* Isko text ko in teeno se upar kar dain gay(index3 s)  */
+    z-index: 3;  /* Sabse aaga  */
+    max-width: 800px; /* bohat lambe paragraphs kharab lrhtey islye unhe 800 me kaaid rakha */
+}
+
+/* Badi wali Hero section ki heading h */
+.hero-text h1 {
+    font-size: 4.8rem; /* Bhot badi wali  */
+    color: white;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 20%, var(--accent) 80%); /* Nila Asmani chamakta text lagne keliye  */
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Chamkta hai safed aur neelay */
+    animation: textShine 4s linear infinite;
+    text-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+}
+
+@keyframes textShine {
+    to { background-position: 200% center; }
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: #e2e8f0;
+    margin-bottom: 2.5rem; /* Neeche bttno pe jagh diye */
+    max-width: 600px; /* text 600px width par ruk jayega next line m ajaegi  */
+}
+
+/* Buttons explore ko sath me rakhne wala chota dababa */
+.hero-buttons {
+    display: flex;
+    gap: 1rem; /* donoo butno k beech m gap */
+}
+
+/* ================================================= */
+/* 👨‍🏫 ABOUT SECTION (Apne sansthan yani carrier education Amethi ki details klye) */
+/* ================================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ADHI zage adhe photo ke ADHI khabr or detail me (2 column diayh adhe a dhe )   */
+    gap: 4rem; /* Dono bhago mein gap lga diya bada sa*/
+    align-items: center; /* center kia hai upr niche s */
+}
+
+.about-img {
+    position: relative; /* Image ki poori layout div ko rakha  */
+    border-radius: 20px; 
+    z-index: 1;
+}
+
+.about-img img {
+    width: 100%;  /* container ki sari chodi */
+    border-radius: 20px; /* ghol corner photo ke bhe theek div ke trah */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* User asked for shadow: shadow aur dark aur badi kar di gayi hai */
+}
+
+/* photo ke piche jo border k gola-frame that proper style me fix kiya as elegant block */
+.about-img::before {
+    content: '';
+    position: absolute; /* chipkadiya gaya uss frame ko   */
+    top: 20px; left: -20px; /* Thoda neeche (bottom) aur right ki taraf adjust kiya */
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)); /* neela violet background dibba banaya piche */
+    opacity: 0.15; /* Dhundhla transparent look k liye */
+    border-radius: 20px;
+    z-index: -1;  /* pexhca chupa dena varna text uper photo cut jyegi  */
+}
+
+/* Box ke bahar "10+" Experience dikhne wla hissa(chhota badge)  */
+.experience-badge {
+    position: absolute;
+    bottom: -30px; right: -30px; /* neeche right k dba dia */
+    padding: 1.5rem; /* bada krta h chode pad k zriye andar se text  */
+    text-align: center;
+    color: var(--primary-dark);
+}
+.experience-badge h3 { font-size: 2.5rem; color: var(--primary); margin: 0; }
+.experience-badge p { font-weight: 600; margin: 0; }
+
+.about-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.description { color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem; }
+
+/* Adhi idar team (Founder & teacher sir) k profile details */
+.team-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-card {
+    padding: 1rem; /* profile id card size dbe mein padding diya andhr space */
+    display: flex; /* name aur icon inhi ek satha ek line mey layengey left right maen  */
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.team-card .icon { font-size: 2rem; color: var(--secondary); }
+.team-card h4 { margin: 0; font-size: 1.1rem; }
+.team-card span { font-size: 0.9rem; color: var(--text-light); }
+
+
+/* ================================================= */
+/* 📚 COURSES (Course section ke silsilewar list grids wala view jsime cards baney h ) */
+/* ================================================= */
+.courses-grid {
+    display: grid; /* har cards box ko line se alag karke rkhega */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Apna auto matic aglae line mey box bhejdaiga agr jaga fill hogy i 350px lene baad  */
+    gap: 2rem; /* hrcard aour dibbe k becech 2rem dori */
+}
+
+/* ek specific coursed bbok ya card */
+.course-card {
+    overflow: hidden; /* agar picture badi hai card frame se ti cut jaye bahr faila ni  */
+    padding: 0; 
+    transition: var(--transition); /* uapar ayee jab cursor tikh kre, tab smooth chalayaega  */
+}
+
+.course-card:hover {
+    transform: translateY(-10px); /* dhass px uper bhej deta hai course box card ko */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* parchaiee ncehee bhd  jaeygee kfi */
+}
+
+.course-img {
+    height: 220px; /* pic ki ek set lambaee krdi gye hae card mein eina he aygaa */
+    position: relative;
+    overflow: hidden; /* taaki zoom krnepe dibbe k  bhar nai khisskeye */
+}
+
+.course-img img {
+    width: 100%; height: 100%; border-radius:15px;
+    object-fit: cover; /* fit rhegy dibbe key area mae bilkil center se perfect size m */
+    transition: var(--transition); 
+}
+
+/* photo pr hover hone se thoda zoom andur hohona */
+.course-card:hover .course-img img {
+    transform: scale(1.1);
+}
+
+/* Card pe price tag (₹ paise kitne h course vhala dabba jo upa r dikh rhaa he right mey ) */
+.price-tag {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2; /* pichsury na chuppayae ielye uper */
+}
+
+.course-content { padding: 2rem; /* bda lamba text chota area k bad margin dediyea */ }
+.course-content h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+.course-content p { color: var(--text-light); margin-bottom: 1.5rem; }
+
+/* click links in course card*/
+.course-link {
+    color: var(--primary); /* neela diyaa  */
+    font-weight: 600;
+    display: inline-flex; /* tir aane samane right pe ayaga */
+    align-items: center;  /* line stright bichi ma rhengi */
+    gap: 0.5rem; 
+    transition: var(--transition);
+}
+
+.course-link:hover {
+    gap: 1rem; /* hover krney p tir thida agaya badhyyeg */
+    color: var(--secondary);
+}
+
+
+/* ================================================= */
+/* 🌟 WHY CHOOSE US (Char(4) gol ikno k box ki styaeling ismee dli ha)  */
+/* ================================================= */
+.why-us {
+    position: relative;
+    overflow: hidden; /* bahar cheez cut jane chye */
+}
+
+.why-us-bg {
+    position: absolute; /* piche lagaya ek cover bg  */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;  /* fits  */
+    background-position: center;   /* centrelizeee  */
+    background-attachment: fixed; /* fixd kar dye tab scroll pe photo apni zhg rheg i, ye parallx hai */
+    z-index: 1; /* piche rhegyi haameeasa  */
+}
+
+/* Background thora andhaerw me */
+.why-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 2;
+}
+
+.features-grid {
+    display: grid; /* char hisso me batt dye gaye hai */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative; z-index: 3; /* text upar aa ske esiley 3diya  */
+}
+
+.feature-card { padding: 2.5rem; text-align: center; color: white; transition: var(--transition); }
+.feature-card:hover { transform: translateY(-10px); /* 10p khishkeney ko upper chle gv */}
+
+/* circle with icons at center inside whiychussss...* */
+.feature-icon {
+    width: 80px; height: 80px;
+    margin: 0 auto 1.5rem; /* sentrailized by 0 auto  */
+    background: linear-gradient(135deg, var(--primary), var(--secondary)); /* blueish perpal mixed shdaea */
+    border-radius: 50%; /* gol banaya 50s ee */
+    display: flex; /* cenering * the insideee ifonns/ */
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.feature-card h3 { color: white; margin-bottom: 1rem; }
+.feature-card p { color: #e2e8f0; }
+
+
+/* ================================================= */
+/* 💬 TESTIMONIALS (Jo vidyarthi padhe h unkey vichaar unk photo auto scroll honge yaha se)  */
+/* ================================================= */
+/* Auto-scroll wrapper yani bahri dabba jismein bahr na bahe box */
+.testimonial-marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Ye seedhi line me boxes ko array ktrh le ayg aur dheme dheme scroll karega */
+.testimonial-marquee {
+    display: flex;
+    gap: 2rem; /* Boxes k bich me jagah */
+    width: max-content; /* Lambi chain */
+    animation: scrollTestimonials 40s linear infinite; /* 40 seconds ka dheema scrolling */
+}
+
+/* Mouse rakhne (hover) par Animation pause/rukk jayega */
+.testimonial-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Ek single review/testimonial card */
+.testimo-card { 
+    padding: 2.5rem; 
+    position: relative; 
+    width: 400px; /* Ek card ki width fix */
+    max-width: 85vw; /* Responsive banaya, mobile par screen ka 85% space lega */
+    flex-shrink: 0; /* Sikudna nah, apni width banaye rkna */
+    white-space: normal;
+} 
+
+/* Scrolling trick (0 se adha rasta translate kro phr se shuru kar dho seamlessly) */
+@keyframes scrollTestimonials {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); }
+}
+
+.quotes { /* quote yani comma(,) wali ikon dhondahale the y */
+    color: var(--accent); font-size: 2.5rem; opacity: 0.3; /* dhobla ya feka panna dikha * */
+    position: absolute; top: 20px; right: 20px; /* issey upr set kro   */
+}
+
+.testimo-card p {
+    font-style: italic; /* thoda lta text style (tircha *   */
+    color: var(--text-dark); margin-bottom: 2rem; position: relative; z-index: 2;
+}
+
+/* student ke profile section with pic on the left and naame side maey  h  ha */
+.student-info { display: flex; align-items: center; gap: 1rem; }
+.student-info img {
+    width: 60px; height: 60px;
+    border-radius: 50%; /* photo bi gkoll kre di  */
+    object-fit: cover;
+}
+.student-info h4 { margin: 0; }
+.student-info span { font-size: 0.85rem; color: var(--primary); font-weight: 500; }
+
+
+/* ================================================= */
+/* 📱 CONTACT (Adhoora ek hissa jaankari or dosra hissa message type krne  ke box banataha eht yeh) */
+/* ================================================= */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Adha left form , adha l eft address likha rhega maps aayegy a  */
+    overflow: hidden; /* out form tought ko chupai ya na deki asey rokga */
+}
+
+/* Left side adress wala  */
+.contact-info {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary)); /* neele rang dya h usay  */
+    color: white; padding: 4rem;
+}
+.contact-info h2 { color: white; }
+.contact-info p { color: #e2e8f0; margin-bottom: 2rem; }
+
+.info-list li { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+.info-list i { font-size: 1.5rem; color: var(--accent); margin-top: 5px; } /* maps and oihne email icons ko color dyte asmamnei cyhan hue */
+.info-list h4 { color: white; margin: 0 0 0.2rem 0; }
+.info-list p { margin: 0; font-size: 0.95rem; }
+
+/* Right side  form (Bhejne wla dhiknne ke liy)  */
+.contact-form-container { padding: 4rem; /* andar choda bnana */ }
+.contact-form-container h3 { font-size: 2rem; margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.5rem; } /* eek line input box  ke space diya */
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%; /* input poori jhgha gheraiga (Line mey pppor r) */
+    padding: 1rem 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px; /* koorne ghol kray */
+    font-size: 1rem; font-family: 'Poppins', sans-serif;
+    transition: var(--transition); /* smahothi smooth eeffect on press clickin inside  */
+    background: #f8fafc;
+}
+
+/* jaabb user k click form k dibbe pr ayehga tbhi box neela bordar kr dga  */
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary); /* neela diya bbbordar */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); 
+    background: white; /* sfed ho zhyhe  */
+}
+
+/* Server seee succeess ya errur aaney ke baad  bhejehgy gay message ke color aur diseagn h yeh nchaiyea */
+.form-message {
+    margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none; text-align: center; font-weight: 500;
+}
+.form-message.success { background: #dcfce7; color: #166534; display: block; } /* hara rglao (green  scces )  */
+.form-message.error { background: #fee2e2; color: #991b1b; display: block; } /* lhhl lal rang (red error fal )  */
+
+
+/* ================================================= */
+/* ⬇️ FOOTER (Website ka pairo wala sabse akhir hissa jis pr logo or linkhien hain) */
+/* ================================================= */
+.footer { background: #0f172a; color: #94a3b8; padding-top: 5rem; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; /* columns m bhatna 4 bhagon m  */
+    gap: 3rem; margin-bottom: 4rem;
+}
+.footer-info p { margin: 1.5rem 0; }
+.social-links { display: flex; gap: 1rem; }
+.social-links a {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); /* halka white the glass wala dibba link */
+    display: flex; justify-content: center; align-items: center; color: white; transition: var(--transition);
+}
+.social-links a:hover { background: var(--primary); transform: translateY(-3px); }
+
+.footer-links h3, .footer-contact h3 { color: white; margin-bottom: 1.5rem; }
+.footer-links ul li { margin-bottom: 0.8rem; }
+.footer-links ul li a { transition: var(--transition); }
+/* Hover hone p nechen link text asmaani hoga ur line aga khiskegi thoeddi s  */
+.footer-links ul li a:hover { color: var(--accent); padding-left: 5px; }
+
+.newsletter-form { display: flex; margin-top: 1rem; } /* email lene wale dhibey auru butttons */
+.newsletter-form input {
+    flex: 1; padding: 0.8rem 1rem; border: none; border-radius: 5px 0 0 5px; outline: none; /* right korney squere he kyki btton chipkjh raha hs */
+}
+.newsletter-form button {
+    background: var(--primary); color: white; border: none; padding: 0 1.5rem; border-radius: 0 5px 5px 0;
+    cursor: pointer; transition: var(--transition);
+}
+.newsletter-form button:hover { background: var(--primary-dark); }
+.footer-bottom { text-align: center; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.1); }
+
+
+/* ================================================= */
+/* 🛟 FLOATING ELEMENTS (Screen per tairne aale WhatsApp ya uper jane wala teer/arrow) */
+/* ================================================= */
+.whatsapp-btn {
+    position: fixed; /* fixd kiya ek hi kine pe chipkkkey rehgeyh  */
+    bottom: 30px; left: 30px; /* baaien (Left side ) oar nicha h  k */
+    width: 60px; height: 60px;
+    background: #25D366; /* whtsapp hara rgnga the orihaonal wala  */
+    color: white; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000; transition: var(--transition);
+    animation: pulse 2s infinite; /* dil ki dharkan jkise jallhbhubj hogha wthassp   */
+}
+
+.whatsapp-btn:hover { transform: scale(1.1); }
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.scroll-top {
+    position: fixed; bottom: 30px; right: 30px; /* Daienn (Right side )  pe he  nicha  */
+    width: 50px; height: 50px; background: var(--accent); color: white;
+    border: none; border-radius: 50%; font-size: 1.2rem; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+    z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition);
+}
+.scroll-top.show { opacity: 1; visibility: visible; }
+.scroll-top:hover { transform: translateY(-5px); background: var(--primary); }
+
+
+/* ================================================= */
+/* 🎭 CSS ANIMATIONS (Parchaeh , oopar ana , chupna wagra chzen)  */
+/* ================================================= */
+.animate-up {
+    opacity: 0; /* chupi hue rhae shuru m   */
+    transform: translateY(30px); /* nieechse ooorp aaighei */
+    animation: fadeInUp 1s forwards; /* 1 secodn me aaighey pori g */
+}
+
+/* thoda deeri sse aane ki trkkeb (deleys)  h dhieere se pichhe laggehh aate jaaingegy i , ye 2/4 sconde delay hotae */
+.delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; } .delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+.scroll-reveal { opacity: 0; transition: all 1s ease; }
+.scroll-reveal.bottom { transform: translateY(50px); }
+.scroll-reveal.left { transform: translateX(-50px); }
+.scroll-reveal.right { transform: translateX(50px); }
+.scroll-reveal.active { opacity: 1; transform: translate(0); }
+
+.box-reveal { opacity: 0; transform: scale(0.9) translateY(30px); transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.box-reveal.active { opacity: 1; transform: scale(1) translateY(0); }
+
+/* Premium Floating Background Blobs */
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.5;
+    animation: floatBlob 15s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+.blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: rgba(79, 70, 229, 0.3); border-radius: 50%; }
+.blob-2 { bottom: -10%; right: -10%; width: 600px; height: 600px; background: rgba(236, 72, 153, 0.3); border-radius: 50%; animation-delay: -5s; left: auto; }
+.blob-3 { top: 40%; left: 30%; width: 400px; height: 400px; background: rgba(14, 165, 233, 0.3); border-radius: 50%; animation-delay: -10s; }
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(50px, -50px) scale(1.1) rotate(45deg); }
+    100% { transform: translate(-50px, 50px) scale(0.9) rotate(90deg); }
+}/* ================================================= */
+/* 📱 MEDIA QUERIES (Mobile/Phone ya ipad par website choti hone par usko adjust kese karna hai)  */
+/* ================================================= */
+@media (max-width: 1024px) { /* tablets keliy  */
+    .hero-text h1 { font-size: 3.5rem; }
+    .contact-wrapper { display: flex; flex-direction: column; } /* aamane saamnye ss uppere neechec lhangeey form ho aur contact ko  */
+    .contact-info, .contact-form-container { padding: 3rem; }
+}
+
+@media (max-width: 768px) { /* Mobile phonse keliyr screen cthoty  ha kyo ki */
+    .header { padding: 1rem 0; }
+    
+    /* Navbar hiddin hoga mobie ki side right mey ek sliding menu baneaga  */
+    .navbar .nav-links, .nav-buttons {
+        position: fixed; top: 0; right: -100%; height: 100vh; width: 80%; max-width: 300px;
+        background: var(--bg-white); flex-direction: column; justify-content: center; align-items: center;
+        transition: var(--transition); box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    }
+    .navbar .nav-links.active, .navbar.active .nav-buttons { right: 0; /* right se isko wapis screen mein laaeyghu g  */}
+    
+    .nav-links li a { color: var(--text-dark) !important; font-size: 1.2rem; }
+    .hamburger { display: block; color: var(--text-dark); /* hamburger walae 3lines dhandhiya dikhne layenge  */ }
+    
+    .hero-overlay { background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)); }
+    .hero-text h1 { font-size: 2.5rem; }
+    .about-grid { grid-template-columns: 1fr; } /* about box s ek dooser per ek kar diyne  */
+    .experience-badge { right: 0; bottom: -20px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; } /* footre links  upreaeniche kar diy e */
+}

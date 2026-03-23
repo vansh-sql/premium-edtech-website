@@ -1,0 +1,753 @@
+<!-- ============================================== -->
+<!-- 🏠 INDEX.HTML (Yaani Home Page) -->
+<!-- Yeh page website ka sabse main page hai jise kholte hi sabse pehle yahi dikhega -->
+<!-- ============================================== -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPUTER CARRIER EDUCATION | Build Your Career in IT</title>
+    <!-- Yeh fonts aur icons (Jaise Facebook logo wagaira) external link se mangwane ke liye -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Design & style ko lagane ke liye (CSS file ka link) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Premium Blobs Background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- 🔄 PRELOADER (Load hone tak Gol-Gol ghumne wala animation) -->
+    <!-- Jab Website pehli baar load hoti hai toh yeh thodi der screen par dikhta hai -->
+    <div id="preloader">
+        <div class="loader">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- 🔝 NAVBAR (Website ke sabse upar ka hissa jisme menu aur logo rehta hai) -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <!-- 🏢 Logo Wala Hissa -->
+            <a href="/" class="logo">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div class="logo-text">
+                    <span class="logo-title">CCE</span>
+                    <span class="logo-sub">Amethi</span>
+                </div>
+            </a>
+
+            <!-- 🔗 Menu Links (Jaise Home, About) jin par click karke alag section me jate hain -->
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <!-- 🎓 Course me jaldi form bharna (Enroll karna) wala button -->
+                <a href="#courses" class="btn btn-outline-sm">Enroll Now</a>
+            </div>
+
+            <!-- 📱 Mobile ke liye (3 lines wala menu bar icon) -->
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 🎬 HERO SECTION (Home Page ka bada sa hissa slider wala, jab website khulti hai) -->
+    <section id="home" class="hero">
+        <!-- 🖼️ Slide hoti tasveere (Background auto slider images) -->
+        <div class="carousel" id="hero-carousel">
+            <div class="slide active"
+                style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            </div>
+        </div>
+
+        <!-- 🌑 Andhera karna (Overlay) taki likha hua text saaf dikhe -->
+        <div class="hero-overlay"></div>
+
+        <!-- ✍️ Hero Section pe likha bada heading text jo aate hue animate hoga -->
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="animate-up">Build Your Career in IT</h1>
+                <p class="animate-up delay-1">Join COMPUTER CARRIER EDUCATION Today. Expert faculty, comprehensive
+                    courses, and proven results in Amethi, India.</p>
+                <div class="hero-buttons animate-up delay-2">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#contact" class="btn btn-outline-light">Contact Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📖 ABOUT SECTION (Apne baare me aur teachers ki jaankari ke liye) -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <!-- 📸 About wala photo jisme kitne saal hue ye likha hoga -->
+                <div class="about-img box-reveal">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Experienced Teacher">
+                    <div class="experience-badge glass-card">
+                        <h3>10+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+
+                <!-- 🖋️ Likhawat wala Hissa (Jiski details hain yahan) -->
+                <div class="about-content scroll-reveal right">
+                    <div class="section-title">
+                        <span class="subtitle">About Us</span>
+                        <h2>Empowering Minds With Digital Literacy</h2>
+                    </div>
+                    <p class="description">Computer Carrier Education is a premier technical institute in Amethi,
+                        dedicated to transforming students into IT professionals. We provide practical, career-oriented
+                        computer training to help you succeed in the digital world.</p>
+
+                    <!-- 👨‍🏫 Team Members (Founder and Expert Teacher info) -->
+                    <div class="team-info">
+                        <div class="team-card glass-card">
+                            <i class="fa-solid fa-user-tie icon"></i>
+                            <div>
+                                <h4>Amit Singh</h4>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                        <div class="team-card glass-card">
+                            <i class="fa-solid fa-chalkboard-user icon"></i>
+                            <div>
+                                <h4>Amit Tiwari Sir</h4>
+                                <span>Expert Teacher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary mt-4">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📚 COURSES SECTION (Sabhi course ki Cards list ke liye yahan update ki gayin image url se) -->
+    <section id="courses" class="courses section bg-light">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal bottom">
+                <span class="subtitle">What We Offer</span>
+                <h2>Our Premium Courses</h2>
+                <p>Industry-recognized certifications designed to make you job-ready.</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1: ADCA -->
+                <div class="course-card glass-card box-reveal delay-1">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ADCA">
+                        <span class="price-tag">₹4,999</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>ADCA</h3>
+                        <p>Advance Diploma in Computer Applications. Master software, hardware, and complete office
+                            suites.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 2: CCC (Image updated taki computer na mizz ho aur clothes na aaye) -->
+                <div class="course-card glass-card box-reveal delay-2">
+                    <div class="course-img">
+                        <!-- Nayi tasveer, Laptop Desk pe -->
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="CCC Computer">
+                        <span class="price-tag">₹2,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>CCC</h3>
+                        <p>Course on Computer Concepts. Essential for government jobs and foundational digital literacy.
+                        </p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 3: O Level -->
+                <div class="course-card glass-card box-reveal delay-3">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="O Level">
+                        <span class="price-tag">₹4,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>"O" Level</h3>
+                        <p>NIELIT O-Level Certification. Comprehensive training in IT tools, Web Design, and
+                            Programming.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 4: Tally ERP -->
+                <div class="course-card glass-card box-reveal delay-1">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Tally ERP">
+                        <span class="price-tag">₹2,999</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Tally ERP (With GST)</h3>
+                        <p>Learn advanced accounting, inventory management, and taxation with industry standard
+                            software.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 5: MS Office (Image updated) -->
+                <div class="course-card glass-card box-reveal delay-2">
+                    <div class="course-img">
+                        <!-- Nayi tasveer, Office mein kaam krte hue (Coffee/Laptop) -->
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="MS Office Working">
+                        <span class="price-tag">₹1,499</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>MS Office Pro</h3>
+                        <p>Deep dive into Word, PowerPoint, Access, and Publisher for professional documentation.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 6: Advanced Excel -->
+                <div class="course-card glass-card box-reveal delay-3">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Advanced Excel">
+                        <span class="price-tag">₹1,999</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Advanced Excel</h3>
+                        <p>Master complex formulas, macros, pivot tables, and data analysis to boost productivity.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course 7: Typing -->
+                <div class="course-card glass-card box-reveal delay-1">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Typing">
+                        <span class="price-tag">₹999</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Typing Hindi & English</h3>
+                        <p>High-speed, accurate typing courses with certification required for competitive exams.</p>
+                        <a href="courses.html" class="course-link">View Details <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💯 WHY CHOOSE US (Hume hi kyu chuna jaye - Facilities) -->
+    <section id="why-us" class="why-us section">
+        <!-- Piche background picture pe dhundhala colour (dark overlay) dalna -->
+        <div class="why-us-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+        </div>
+        <div class="why-overlay"></div>
+
+        <div class="container position-relative">
+            <div class="section-header text-center text-white scroll-reveal">
+                <span class="subtitle text-cyan">Why Choose Us</span>
+                <h2>Your Journey to Success Starts Here</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- 1. Teachers wale icon -->
+                <div class="feature-card glass-light scroll-reveal bottom delay-1">
+                    <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Expert Teachers</h3>
+                    <p>Learn directly from Amit Tiwari Sir and other industry veterans with practical knowledge.</p>
+                </div>
+                <!-- 2. Labs wale icon -->
+                <div class="feature-card glass-light scroll-reveal bottom delay-2">
+                    <div class="feature-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>Modern Labs</h3>
+                    <p>Fully equipped computer labs with high-speed internet and the latest software setups.</p>
+                </div>
+                <!-- 3. Certificates wale icon -->
+                <div class="feature-card glass-light scroll-reveal bottom delay-3">
+                    <div class="feature-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Valid Certification</h3>
+                    <p>Receive internationally and widely accepted certificates upon successful course completion.</p>
+                </div>
+                <!-- 4. Fees wale icon -->
+                <div class="feature-card glass-light scroll-reveal bottom delay-4">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>Affordable Fees</h3>
+                    <p>Premium education doesn't have to be expensive. Quality learning at minimal costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💬 TESTIMONIALS (Jo purane students pass ho chuke unke review padhne ke liye) -->
+    <section id="testimonials" class="testimonials section bg-light">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal bottom">
+                <span class="subtitle">Success Stories</span>
+                <h2>What Our Students Say</h2>
+            </div>
+
+            <!-- Testimonial Marquee Container (Yahan p patti continuous auto scroll hogi) -->
+            <div class="testimonial-marquee-wrapper">
+                <div class="testimonial-marquee">
+                    <!-- ======== GROUP 1 (Asli data jo saamne aayega) ======== -->
+                    <!-- 1. Lina -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"CCE Amethi se coding seekhna mera sabse best decision tha. Teachers bohot supportive hain aur practical classes se bohot confidence aata hai."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=200" alt="Lina">
+                            <div>
+                                <h4>Lina</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Vansh "O" Level -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Computer Carrier Education se O-Level master karna game changer tha mene C language aur
+                            Python lab me sikhi. Amit Sir ka padhane ka style bohot hi shandar hai!"</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Vansh">
+                            <div>
+                                <h4>Vansh Pratap Singh</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Giriraj "O" Level -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"O-Level ki classes bohot advance aur practical hain. Amit Sir ne saare topics deeply cover
+                            kiye jisse mujhe aaram se IT company placement lene me madad mili."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200" alt="Giriraj">
+                            <div>
+                                <h4>Giriraj Singh</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Roli "O" Level -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Ek saal ke O-Level program me theory ke sath sath practical par bohot zor diya jaata hai.
+                            Web designing yahan sikh kar maine apni khud ki websites banana start kiya."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Roli">
+                            <div>
+                                <h4>Roli Yadav</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Zeenat "O" Level -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"O-Level course me sabse acchi baat yahan ka environment hai. Lab humesha available rehti hai
+                            practice ke liye aur teachers daily programming seekhate hain."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200" alt="Zeenat">
+                            <div>
+                                <h4>Zeenat</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Rahul Thakur - CCC -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"CCC exam crack karna bohot asaan laga yaha padhne se, kyuki mock tests regularly karwaye
+                            gaye the. Best computer coaching in Amethi for sure."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200" alt="Rahul">
+                            <div>
+                                <h4>Rahul Thakur</h4>
+                                <span>CCC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Amit Kumar - ADCA -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"ADCA course yahan se karne ke baad meri Ms Office aur Tally dono me proper grip ban chuki
+                            hai. Overall learning experience kaafi top-class raha."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200" alt="Amit">
+                            <div>
+                                <h4>Amit Kumar</h4>
+                                <span>ADCA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Priya Sharma - Tally ERP -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Accounting aur GST ke concepts ko deeply explain kiya. Course ke end tak maine puri self
+                            confidence ke sath company balance sheets sambhalna sikh liya tha."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Priya">
+                            <div>
+                                <h4>Priya Sharma</h4>
+                                <span>Tally ERP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Neha Gupta - MS Office -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Back office private jobs paane me mujhe yahan sikhana pada MS office. Word typing se lekar
+                            advance excel formulas tak sab perfectly sikhne ko mila."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200" alt="Neha">
+                            <div>
+                                <h4>Neha Gupta</h4>
+                                <span>MS Office</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Anjali Verma - Typing -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Daily typing test software ki practice se meri speed bohot jump ki. Speed 45+ wpm ho gyi hai
+                            aur me government typing exams pass kar rhi hu aram se."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200" alt="Anjali">
+                            <div>
+                                <h4>Anjali Verma</h4>
+                                <span>Typing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ======== GROUP 2 (Yahi students dubara (duplicate), Taaki bina ruke scroll hota rahe infinite patti bar) ======== -->
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"CCE Amethi se coding seekhna mera sabse best decision tha. Teachers bohot supportive hain aur practical classes se bohot confidence aata hai."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=200" alt="Lina">
+                            <div>
+                                <h4>Lina</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Computer Carrier Education se O-Level master karna game changer tha mene C language aur
+                            Python lab me sikhi. Amit Sir ka padhane ka style bohot hi shandar hai!"</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Vansh">
+                            <div>
+                                <h4>Vansh Pratap Singh</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"O-Level ki classes bohot advance aur practical hain. Amit Sir ne saare topics deeply cover
+                            kiye jisse mujhe aaram se IT company placement lene me madad mili."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200" alt="Giriraj">
+                            <div>
+                                <h4>Giriraj Singh</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Ek saal ke O-Level program me theory ke sath sath practical par bohot zor diya jaata hai.
+                            Web designing yahan sikh kar maine apni khud ki websites banana start kiya."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Roli">
+                            <div>
+                                <h4>Roli Yadav</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"O-Level course me sabse acchi baat yahan ka environment hai. Lab humesha available rehti hai
+                            practice ke liye aur teachers daily programming seekhate hain."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200" alt="Zeenat">
+                            <div>
+                                <h4>Zeenat</h4>
+                                <span>"O" Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"CCC exam crack karna bohot asaan laga yaha padhne se, kyuki mock tests regularly karwaye
+                            gaye the. Best computer coaching in Amethi for sure."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200" alt="Rahul">
+                            <div>
+                                <h4>Rahul Thakur</h4>
+                                <span>CCC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"ADCA course yahan se karne ke baad meri Ms Office aur Tally dono me proper grip ban chuki
+                            hai. Overall learning experience kaafi top-class raha."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200" alt="Amit">
+                            <div>
+                                <h4>Amit Kumar</h4>
+                                <span>ADCA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Accounting aur GST ke concepts ko deeply explain kiya. Course ke end tak maine puri self
+                            confidence ke sath company balance sheets sambhalna sikh liya tha."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Priya">
+                            <div>
+                                <h4>Priya Sharma</h4>
+                                <span>Tally ERP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Back office private jobs paane me mujhe yahan sikhana pada MS office. Word typing se lekar
+                            advance excel formulas tak sab perfectly sikhne ko mila."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200" alt="Neha">
+                            <div>
+                                <h4>Neha Gupta</h4>
+                                <span>MS Office</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimo-card glass-card">
+                        <div class="quotes"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Daily typing test software ki practice se meri speed bohot jump ki. Speed 45+ wpm ho gyi hai
+                            aur me government typing exams pass kar rhi hu aram se."</p>
+                        <div class="student-info">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200" alt="Anjali">
+                            <div>
+                                <h4>Anjali Verma</h4>
+                                <span>Typing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📞 CONTACT SECTION (Form jahan se nayi inquiry server tak pahuchegi) -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-wrapper glass-card scroll-reveal bottom">
+                <!-- 🏢 Office ki location map aur phone numbers left side pe de kar rakhen hain -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to start your IT journey? Reach out to us today.</p>
+
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>Amethi, Uttar Pradesh, India</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+91 9026385513</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>vanshpiparpur@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 🗺️ Google map embed karna -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114312.44960309105!2d81.74558064434257!3d26.155850983808795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a8b1db84eeb1d%3A0xc6ad1d2cf93ed478!2sAmethi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%" height="200" style="border:0; border-radius: 12px; margin-top:20px;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- 📧 Ye form right side me jahan text dalkr bhejenge user -->
+                <div class="contact-form-container">
+                    <h3>Send a Message</h3>
+                    <!-- Form par formTag lagta hai jisme send btn hai - Backend usse catch kr lega -->
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <!-- Naya "Select Course" Dropdown Add Kiya Gaya WhatsApp k lie -->
+                        <div class="form-group">
+                            <select id="course" name="course" required>
+                                <option value="" disabled selected>Select a Course (Inquiry)</option>
+                                <option value="O Level">"O" Level Certification</option>
+                                <option value="ADCA">ADCA</option>
+                                <option value="CCC">CCC</option>
+                                <option value="Tally ERP">Tally ERP (With GST)</option>
+                                <option value="MS Office">MS Office Pro</option>
+                                <option value="Typing">Typing Hindi/English</option>
+                                <option value="General Query">General Query</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <!-- Bhejne (Submit karne ka button) -->
+                        <button type="submit" class="btn btn-primary w-100">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <!-- Form gya ya ni, uska result yaha laal/hare range me aayega -->
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⬇️ FOOTER (Website ka sabse niche wala Bottom hissa links ke zariye pages switch karne ke liye) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <div class="logo-text">
+                        <span class="logo-title text-white">CCE</span>
+                    </div>
+                </a>
+                <p>Computer Carrier Education under the guidance of Founder Amit Singh and Teacher Amit Tiwari Sir is
+                    shaping the future of IT students in Amethi.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Top Courses</h3>
+                <ul>
+                    <li><a href="courses.html">O Level</a></li>
+                    <li><a href="courses.html">ADCA</a></li>
+                    <li><a href="courses.html">Tally ERP</a></li>
+                    <li><a href="courses.html">Typing English/Hindi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Newsletter</h3>
+                <p>Subscribe for updates and educational offers.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Computer Carrier Education. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 💬 FLOATING WHATSAPP BUTTON (Hawa me tehsne wala har jagah jisse website admin ko whatsapp message jaye) -->
+    <a href="https://wa.me/919026385513" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 🚀 Upar Jane ke liye Back To Top button (Yeh gayeb rehta hai shuruat mein jab scroll kro tb dikhta hai) -->
+    <button id="scrollTop" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Ye script (JS) file chalane ke liye end mein include kiya taki page tezi se load le sake -->
+    <script src="script.js"></script>
+</body>
+
+</html>

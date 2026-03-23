@@ -3,7 +3,7 @@
 Yo! Welcome to the official repository of the **Computer Carrier Education** website. 
 I built this project to give our local IT coaching institute a slick, ultra-modern, and premium online presence. No boring old-school templates—just pure custom design, glassmorphism, and smooth animations.
 
-✨ **Live Vibe Check:** *(Add your deployed link here later)*
+✨ **Live Vibe Check:** *([Add your deployed link here later](https://vansh-sql.github.io/premium-edtech-website/))*
 
 ## 🎨 What's Inside?
 This isn't just a basic static page; it's an experience. Here is what I baked into it:
